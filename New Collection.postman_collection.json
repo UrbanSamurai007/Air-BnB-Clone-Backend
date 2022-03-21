@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "1316e5c0-605c-45ea-9523-59aa11092582",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mutations",
+			"item": [
+				{
+					"name": "addUser_customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n    addUser (\r\n        username: \"urban_samurai007\"\r\n        firstname: \"Matthew\"\r\n        lastname: \"Campbell\"\r\n        password: \"password!0\"\r\n        email: \"emailaddress@email.com\"\r\n        type: \"customer\"\r\n    )\r\n    {\r\n        id\r\n        username\r\n        firstname\r\n        lastname\r\n        password\r\n        email\r\n    }\r\n    \r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/graphql?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUser_Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n    addUser (\r\n        username: \"newBootGoofin10\"\r\n        firstname: \"Matthew\"\r\n        lastname: \"Campbell\"\r\n        password: \"pswrd07891\"\r\n        email: \"emailaddress111@email.com\"\r\n        type: \"admin\"\r\n    )\r\n    {\r\n        id\r\n        username\r\n        firstname\r\n        lastname\r\n        password\r\n        email\r\n    }\r\n    \r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/graphql?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addListing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n    addListing (\r\n        listing_id: \"1001M\"\r\n        listing_title: \"McMansion\"\r\n        description: \"Quant McMansion in Downtown Toronto\"\r\n        street: \"1 Main St\"\r\n        city: \"Toronto\"\r\n        postal_code: \"A1B 2C3\"\r\n        price: 250.00\r\n        email: \"Emailaddress@email.com\"\r\n        username: \"urban_samurai007\"\r\n        type: \"admin\"\r\n    )\r\n    {\r\n        id\r\n        listing_id\r\n        listing_title\r\n        description\r\n        street\r\n        city\r\n        postal_code\r\n        price\r\n        email\r\n        username\r\n    }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/graphql?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addBooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n   addBooking (\r\n       listing_id: \"1001M\"\r\n       booking_id: \"101345\"\r\n       booking_date: \"02/26/2022\"\r\n       booking_start: \"07/01/2022\"\r\n       booking_end: \"07/07/2022\"\r\n       username: \"urban_samurai007\"\r\n       type: \"customer\"\r\n   )\r\n   {\r\n       id\r\n       listing_id\r\n       booking_id\r\n       booking_date\r\n       booking_start\r\n       booking_end\r\n       username\r\n   }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/graphql?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "query",
+			"item": [
+				{
+					"name": "userLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n    UserLogin (\r\n        username: \"urban_samurai007\"\r\n        password: \"password!0\"\r\n    )\r\n    {\r\n        id\r\n        username\r\n        password\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/graphql?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserBooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n    UserBookings (\r\n        username: \"urban_samurai007\"\r\n        type: \"customer\"\r\n    )\r\n    {\r\n        id\r\n        username\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/graphql?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdminListing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "\r\nquery {\r\n    AdminListings (\r\n        username: \"newBootGoofin10\"\r\n        type: \"admin\"\r\n    )\r\n    {\r\n        id\r\n        username\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/graphql?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "titleSearch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "\r\nquery {\r\n    titleSearch (\r\n        listing_title: \"McMansion\"\r\n    )\r\n    {\r\n        id\r\n        listing_id\r\n        listing_title\r\n        description\r\n        street\r\n        city\r\n        postal_code\r\n        price\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/graphql?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "citySearch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "\r\nquery {\r\n    citySearch (\r\n        city: \"Toronto\"\r\n    )\r\n    {\r\n        id\r\n        listing_title\r\n        street\r\n        city\r\n        postal_code\r\n        price\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/graphql?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "zipSearch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "\r\nquery {\r\n    zipSearch (\r\n        postal_code: \"A1B 2C3\"\r\n    )\r\n    {\r\n        id\r\n        listing_title\r\n        street\r\n        city\r\n        postal_code\r\n        price\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/graphql?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

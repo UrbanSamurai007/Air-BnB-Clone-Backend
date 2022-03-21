@@ -1,0 +1,19 @@
+{
+  "name": "101289518_comp3133_assig1",
+  "version": "1.0.0",
+  "description": "Assignment 1 for Comp 3133, Full Stack Development II",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Matthew Campbell",
+  "license": "ISC",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.25.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^5.11.15"
+  }
+}
